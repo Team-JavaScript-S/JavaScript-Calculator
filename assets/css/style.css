@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline-style: none;
+    outline:none;
+}
+
+body{
+    background-color: #c9c9c9;
+    font-size: 14px;
+}
+input{
+    outline: none;
+    height: 60px;
+    width: 70px;
+    font-weight: 900;
+    font-family: 'Roboto Mono', monospace;
+    background-color:#1b262c ;
+    color:#ffffff; 
+    border-right: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    
+    box-shadow: none;
+
+    padding: 10px;
+
+}
+#number-div{
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#basic-operators-div{
+    display: flex;
+    flex-direction: column;
+}
+
+#cal{
+    width: 490px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+#key-div{
+    width: 70%;
+    display: flex;
+}
+#s-div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#display{
+    width: 490px;
+    height: 250px;
+    font-size: 4em;
+    color: #001B3A;
+    resize: none;
+    background-color: 	#ffffff;
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+.row{
+    display: flex;
+}
+
+#equals{
+    width: 140px;
+    background-color: #0f4c75;
+}
+#decimal{
+    background-color: #0f4c75;
+}
+.number{
+    background-color: #001B3A
+}
+.operator{
+    background-color: #318fb5;
+}
+
