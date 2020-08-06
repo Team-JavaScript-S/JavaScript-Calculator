@@ -2,78 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Javascript Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Javascript Calculator</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="cal">
-        <div id="display-div">
+        <form id="cal" name="calculator">
+                <div id="display-div">
 
-            <textarea name="display" id="display" cols="5" rows="1">
+                        <textarea name="display" id="display" cols="5" rows="1">
 
 
         </textarea>
-        </div>
-       
+                </div>
 
-        <div class="row">
-                <input type="submit" value="CE">
-                <input type="submit" name="clear" value="C">
-                <input type="submit" name="delete" value="DEL">
-                <input type="submit" class="operator" name="divide" value="/">
-                <input type="submit" name="inverse" value="inv">
-                <input type="submit" name="radian" value="Rad">
-                <input type="submit" name="sine" value="Sin">
-        </div>
-        <div class="row">
-                <input type="submit" class="number" name="seven"  value="7">
-                <input type="submit" class="number" name="eight" value="8">
-                <input type="submit" class="number" name="nine" value="9">
-                <input type="submit" class="operator" name="multiply" value="*">
-                <input type="submit" name="cos" value="Cos">
-                <input type="submit"  name="tan" value="Tan">
-                <input type="submit" name="percent" value="%">
-        </div>
+                <!-- using type = "submit" led to auto refreshing of the page rendering it useless, it was changed to button   -->
+                <div class="row">
+                        <input type="button" value="CE" onclick="backSpace()">
+                        <input type="button" name="clear" value="C" onclick="clearAll()">
+                        <input type="button" name="delete" value="DEL" onclick="deleteIn()">
+                        <input type="button" class="operator" name="divide" value="/" onclick="number(value)">
+                        <input type="button" name="inverse" value="inv" onclick="inverse()">
+                        <input type="button" name="radian" value="Rad" onclick="rad()">
+                        <input type="button" name="sine" value="Sin" onclick="sin()">
+                </div>
+                <div class="row">
+                        <input type="button" class="number" name="seven" value="7" onclick="number(value)">
+                        <input type="button" class="number" name="eight" value="8" onclick="number(value)">
+                        <input type="button" class="number" name="nine" value="9" onclick="number(value)">
+                        <input type="button" class="operator" name="multiply" value="*" onclick="number(value)">
+                        <input type="button" name="cosine" value="Cos" onclick="cos()">
+                        <input type="button" name="tangent" value="Tan" onclick="tan()">
+                        <input type="button" id="percent" name="percent" value="%" onclick="number(value)">
+                </div>
 
-        <div class="row">
-                <input type="submit" class="number" name="four" value="4">
-                <input type="submit" class="number" name="five" value="5">
-                <input type="submit" class="number" name="six" value="6">
-                <input type="submit" class="operator" name="substract" value="-">
-                <input type="submit" name="natural-log" value="In">
-                <input type="submit" name="log" value="Log">
-                <input type="submit" name="factorial" value="!">
-        </div>
+                <div class="row">
+                        <input type="button" class="number" name="four" value="4" onclick="number(value)">
+                        <input type="button" class="number" name="five" value="5" onclick="number(value)">
+                        <input type="button" class="number" name="six" value="6" onclick="number(value)">
+                        <input type="button" class="operator" name="substract" value="-" onclick="number(value)">
+                        <input type="button" name="natural-log" value="In" onclick="In()">
+                        <input type="button" name="log" value="Log" onclick="log()">
+                        <input type="button" name="factorial" value="!" onclick="fac()">
+                </div>
 
-        <div class="row">
-                <input type="submit" class="number" name="one" value="1">
-                <input type="submit" class="number" name="two" value="2">
-                <input type="submit" class="number" name="three" value="3">
-                <input type="submit" class="operator" name="add" value="+">
-                <input type="submit" name="power" value="^">
-                <input type="submit" name="pie" value="pie">
-                <input type="submit" name="exponential" value="e">
-        </div>
+                <div class="row">
+                        <input type="button" class="number" name="one" value="1" onclick="number(value)">
+                        <input type="button" class="number" name="two" value="2" onclick="number(value)">
+                        <input type="button" class="number" name="three" value="3" onclick="number(value)">
+                        <input type="button" class="operator" name="add" value="+" onclick="number(value)">
+                        <input type="button" name="power" value="^" onclick="powerOf()">
+                        <input type="button" name="pie" value="pie" onclick="pie()">
+                        <input type="button" name="exponential" value="e" onclick="expo()">
+                </div>
 
-        <div class="row">
-                <input type="submit" id="decimal" name="decimal" value=".">
-                <input type="submit" class="number" name="zero" value="0">
-                <input type="submit" id="equals" name="equals" value="=">
-                
-                <input type="submit" name="left-bracket" value="(">
-                <input type="submit" name="right-bracket" value=")">
-                <input type="submit" name="square-root" value="sqrt">
-        </div>
+                <div class="row">
+                        <input type="button" id="decimal" name="decimal" value="." onclick="number(value)">
+                        <input type="button" class="number" name="zero" value="0" onclick="number(value)">
+                        <input type="button" id="equals" name="equals" value="=" onclick="equal()">
+
+                        <input type="button" name="left-bracket" value="(" onclick="number(value)">
+                        <input type="button" name="right-bracket" value=")" onclick="number(value)">
+                        <input type="button" name="square-root" value="sqrt" onclick="sqrt()">
+                </div>
 
 
-    </div>
+        </form>
+        <script src="js.js"></script>
 </body>
 
 </html>
