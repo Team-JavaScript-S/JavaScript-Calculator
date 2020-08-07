@@ -23,23 +23,25 @@
                 </div>
 
                 <!-- using type = "submit" led to auto refreshing of the page rendering it useless, it was changed to button   -->
+
+                <!-- Classes were added for the hover effect-->
                 <div class="row">
-                        <input type="button" value="CE" onclick="backSpace()">
-                        <input type="button" name="clear" value="C" onclick="clearAll()">
-                        <input type="button" name="delete" value="DEL" onclick="deleteIn()">
+                        <input type="button" class="scientific" value="CE" onclick="backSpace()">
+                        <input type="button" class="scientific" name="clear" value="C" onclick="clearAll()">
+                        <input type="button" class="scientific" name="delete" value="DEL" onclick="deleteIn()">
                         <input type="button" class="operator" name="divide" value="/" onclick="number(value)">
-                        <input type="button" name="inverse" value="inv" onclick="inverse()">
-                        <input type="button" name="radian" value="Rad" onclick="radians()">
-                        <input type="button" name="sine" value="Sin" onclick="sin()">
+                        <input type="button" class="scientific" name="inverse" value="inv" onclick="inverse()">
+                        <input type="button" class="scientific" name="radian" value="Rad" onclick="radians()">
+                        <input type="button" class="scientific" name="sine" value="Sin" onclick="sin()">
                 </div>
                 <div class="row">
                         <input type="button" class="number" name="seven" value="7" onclick="number(value)">
                         <input type="button" class="number" name="eight" value="8" onclick="number(value)">
                         <input type="button" class="number" name="nine" value="9" onclick="number(value)">
                         <input type="button" class="operator" name="multiply" value="*" onclick="number(value)">
-                        <input type="button" name="cosine" value="Cos" onclick="cos()">
-                        <input type="button" name="tangent" value="Tan" onclick="tan()">
-                        <input type="button" id="percent" name="percent" value="%" onclick="percentage()">
+                        <input type="button" class="scientific" name="cosine" value="Cos" onclick="cos()">
+                        <input type="button" class="scientific" name="tangent" value="Tan" onclick="tan()">
+                        <input type="button" id="percent" class="scientific" name="percent" value="%" onclick="percentage()">
                 </div>
 
                 <div class="row">
@@ -47,9 +49,9 @@
                         <input type="button" class="number" name="five" value="5" onclick="number(value)">
                         <input type="button" class="number" name="six" value="6" onclick="number(value)">
                         <input type="button" class="operator" name="substract" value="-" onclick="number(value)">
-                        <input type="button" name="natural-log" value="In" onclick="iN()">
-                        <input type="button" name="log" value="Log" onclick="log()">
-                        <input type="button" name="factorial" value="!" onclick="fac()">
+                        <input type="button" class="scientific" name="natural-log" value="In" onclick="iN()">
+                        <input type="button" class="scientific" name="log" value="Log" onclick="log()">
+                        <input type="button" class="scientific" name="factorial" value="!" onclick="fac()">
                 </div>
 
                 <div class="row">
@@ -57,19 +59,19 @@
                         <input type="button" class="number" name="two" value="2" onclick="number(value)">
                         <input type="button" class="number" name="three" value="3" onclick="number(value)">
                         <input type="button" class="operator" name="add" value="+" onclick="number(value)">
-                        <input type="button" name="power" value="^" onclick="powerOf()">
-                        <input type="button" name="pie" value="pie" onclick="pi()">
-                        <input type="button" name="exponential" value="e" onclick="expo()">
+                        <input type="button" class="scientific" name="power" value="^" onclick="powerOf()">
+                        <input type="button" class="scientific" name="pie" value="pie" onclick="pi()">
+                        <input type="button" class="scientific" name="exponential" value="e" onclick="expo()">
                 </div>
 
                 <div class="row">
-                        <input type="button" id="decimal" name="decimal" value="." onclick="number(value)">
+                        <input type="button" id="decimal" class="scientific" name="decimal" value="." onclick="number(value)">
                         <input type="button" class="number" name="zero" value="0" onclick="number(value)">
                         <input type="button" id="equals" name="equals" value="=" onclick="equal()">
 
-                        <input type="button" name="left-bracket" value="(" onclick="number(value)">
-                        <input type="button" name="right-bracket" value=")" onclick="number(value)">
-                        <input type="button" name="square-root" value="sqrt" onclick="sqrt()">
+                        <input type="button" name="left-bracket" class="scientific" value="(" onclick="number(value)">
+                        <input type="button" name="right-bracket" class="scientific" value=")" onclick="number(value)">
+                        <input type="button" name="square-root" class="scientific" value="sqrt" onclick="sqrt()">
                 </div>
 
 
