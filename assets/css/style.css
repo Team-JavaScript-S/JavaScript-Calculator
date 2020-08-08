@@ -82,11 +82,10 @@ input{
 .operator{
     background-color: #318fb5;
 }
-
 /*the pseudo-class :hover was added to make the calculator look better*/
 .number:hover {
     transform: scale(1.04);
- }
+}
 
  .operator:hover {
     transform: scale(1.04);
